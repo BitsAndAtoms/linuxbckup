@@ -19,5 +19,5 @@ curl --request PUT \
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "Content-Type: application/gzip" \
   --data-binary @"$BACKUP_DIR/latestbckp.tar.gz" \
-  "https://www.googleapis.com/upload/drive/v3/files/?uploadType=media"
+  "https://www.googleapis.com/upload/drive/v3/files/{fileidhere}?uploadType=media"
 # tar -czf "$BACKUP_DIR/oldestbckp.tar.gz" -C "$TIMESHIFT_DIR/$OLDEST_SNAPSHOT" . -v
